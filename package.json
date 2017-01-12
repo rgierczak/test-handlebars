@@ -1,0 +1,19 @@
+{
+    "name": "test-handlebars",
+    "version": "1.0.0",
+    "description": "Test Handlebars.js",
+    "main": "application.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rgierczak/test-handlebars.git"
+    },
+    "author": "Rafał Gierczak",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rgierczak/test-handlebars/issues"
+    },
+    "homepage": "https://github.com/rgierczak/test-handlebars#readme"
+}
