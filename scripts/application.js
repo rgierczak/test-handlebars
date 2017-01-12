@@ -8,23 +8,23 @@
                 occupation: 'JavaScript Developer'
             };
             
-            this.render();
+            this.fetchTemplate();
         }
         
-        render() {
+        fetchTemplate() {
             $.get({
                 url: 'templates/template.hbs',
                 cache: true,
-                success: (template) => this.successHandler(template),
-                error: (message) => this.errorHandler(message)
+                success: (template) => {
+                    this.render(template);
+                },
+                error: (message) => {
+                    throw new Error('Unable to render HandleBars template: ', message);
+                }
             });
         }
 
-        errorHandler(message) {
-            throw new Error('Unable to render HandleBars template: ', message);
-        }
-
-        successHandler(template) {
+        render(template) {
             let $body = $(document.body);
             let $html = $(template).html();
             let templateScript = root.Handlebars.compile($html);
